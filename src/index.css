@@ -4,53 +4,30 @@
 
 @layer base {
   :root {
-    --background: 220 20% 97%;
-    --foreground: 220 30% 15%;
-
+    --background: 0 0% 100%;
+    --foreground: 220 15% 20%;
     --card: 0 0% 100%;
-    --card-foreground: 220 30% 15%;
-
+    --card-foreground: 220 15% 20%;
     --popover: 0 0% 100%;
-    --popover-foreground: 220 30% 15%;
-
-    --primary: 220 70% 50%;
+    --popover-foreground: 220 15% 20%;
+    --primary: 220 90% 50%;
     --primary-foreground: 0 0% 100%;
-
-    --secondary: 220 15% 90%;
-    --secondary-foreground: 220 30% 20%;
-
-    --muted: 220 15% 92%;
+    --secondary: 220 10% 94%;
+    --secondary-foreground: 220 15% 25%;
+    --muted: 220 10% 96%;
     --muted-foreground: 220 10% 45%;
-
-    --accent: 220 15% 88%;
-    --accent-foreground: 220 30% 15%;
-
+    --accent: 220 10% 92%;
+    --accent-foreground: 220 15% 20%;
     --destructive: 0 72% 51%;
     --destructive-foreground: 0 0% 100%;
+    --border: 220 10% 88%;
+    --input: 220 10% 88%;
+    --ring: 220 90% 50%;
+    --radius: 0.375rem;
 
-    --border: 220 15% 85%;
-    --input: 220 15% 85%;
-    --ring: 220 70% 50%;
-
-    --radius: 0.5rem;
-
-    /* Success/Error semantic tokens */
-    --success: 142 76% 36%;
-    --success-foreground: 0 0% 100%;
-    --success-muted: 142 50% 95%;
-    --error: 0 72% 51%;
-    --error-foreground: 0 0% 100%;
-    --error-muted: 0 50% 95%;
-
-    /* Hotel-specific tokens */
-    --room-available: 142 76% 36%;
-    --room-available-foreground: 0 0% 100%;
-    --room-booked: 0 72% 51%;
-    --room-booked-foreground: 0 0% 100%;
-    --room-selected: 220 70% 50%;
-    --room-selected-foreground: 0 0% 100%;
-    --elevator-bg: 220 20% 30%;
-    --floor-bg: 220 15% 94%;
+    --room-available: 142 70% 45%;
+    --room-booked: 0 70% 55%;
+    --room-selected: 220 90% 50%;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -61,92 +38,13 @@
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
-
-  .dark {
-    --background: 220 25% 10%;
-    --foreground: 220 10% 95%;
-
-    --card: 220 25% 13%;
-    --card-foreground: 220 10% 95%;
-
-    --popover: 220 25% 13%;
-    --popover-foreground: 220 10% 95%;
-
-    --primary: 220 70% 55%;
-    --primary-foreground: 0 0% 100%;
-
-    --secondary: 220 20% 20%;
-    --secondary-foreground: 220 10% 90%;
-
-    --muted: 220 20% 18%;
-    --muted-foreground: 220 10% 60%;
-
-    --accent: 220 20% 22%;
-    --accent-foreground: 220 10% 95%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 100%;
-
-    --border: 220 20% 20%;
-    --input: 220 20% 20%;
-    --ring: 220 70% 55%;
-
-    --success: 142 70% 40%;
-    --success-foreground: 0 0% 100%;
-    --success-muted: 142 40% 15%;
-    --error: 0 65% 45%;
-    --error-foreground: 0 0% 100%;
-    --error-muted: 0 40% 15%;
-
-    --room-available: 142 70% 40%;
-    --room-booked: 0 65% 45%;
-    --room-selected: 220 70% 55%;
-    --elevator-bg: 220 20% 20%;
-    --floor-bg: 220 20% 15%;
-
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
 }
 
 @layer base {
   * {
     @apply border-border;
   }
-
   body {
     @apply bg-background text-foreground;
-  }
-}
-
-@layer components {
-  .room-cell {
-    @apply w-10 h-10 rounded-md flex items-center justify-center text-xs font-medium transition-all duration-200 cursor-pointer border-2 border-transparent;
-  }
-
-  .room-available {
-    @apply bg-[hsl(var(--room-available))] text-[hsl(var(--room-available-foreground))] hover:opacity-90;
-  }
-
-  .room-booked {
-    @apply bg-[hsl(var(--room-booked))] text-[hsl(var(--room-booked-foreground))] cursor-not-allowed opacity-80;
-  }
-
-  .room-selected {
-    @apply bg-[hsl(var(--room-selected))] text-[hsl(var(--room-selected-foreground))] ring-2 ring-offset-2 ring-[hsl(var(--room-selected))];
-  }
-
-  .elevator-shaft {
-    @apply bg-[hsl(var(--elevator-bg))] rounded-lg flex items-center justify-center;
-  }
-
-  .floor-row {
-    @apply bg-[hsl(var(--floor-bg))] rounded-lg p-2;
   }
 }
